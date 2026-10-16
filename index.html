@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="Brand">
+            <img src="Photo.jpg/poster.jpg" alt="Logo Brand">
+            <h1>Fast Food</h1>
+        </div>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#pesan">Pesan</a>
+        </nav>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu Kami</h2>
+            <div id="daftar-menu"></div>
+        </section>
+        <section id="pesan">
+            <h2>Form Pesanan</h2>
+            <form id="form-pesan">
+                <label for="item">Menu</label>
+                <select id="item"></select>
+                <label for="jumlah">Jumlah</label>
+                <input type="number" id="jumlah" value="1" min="1">
+                <button type="submit">Pesan Sekarang</button>
+            </form>
+            <p id="hasil"></p>
+        </section>
+    </main>
+    <footer><p>2026 Fast Food</p></footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
