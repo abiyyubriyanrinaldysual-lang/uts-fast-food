@@ -1,41 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Food</title>
+    <title>ValereBites – Fast Food Lezat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+
+    <!-- HEADER / NAVBAR -->
+    <header id="top">
         <div class="Brand">
-            <img src="Photo.jpg/poster.jpg" alt="Logo Brand">
-            <h1>Fast Food</h1>
+            <img src="Photo.jpg/poster.jpg" alt="Logo ValereBites">
+            <div class="brand-text">
+                <h1>ValereBites</h1>
+                <span class="tagline">Fast. Fresh. Flavourful.</span>
+            </div>
         </div>
         <nav>
+            <a href="#hero">Home</a>
             <a href="#menu">Menu</a>
             <a href="#pesan">Pesan</a>
+            <a href="#tentang">Tentang</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
     </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🔥 Hot & Fresh Every Day</span>
+            <h2>Nikmati Kelezatan<br><span>Fast Food</span> Terbaik</h2>
+            <p>Burger juicy, kentang renyah, minuman segar – semuanya tersedia dengan harga terjangkau dan pelayanan cepat.</p>
+            <div class="hero-cta">
+                <a href="#menu" class="btn-primary">Lihat Menu</a>
+                <a href="#pesan" class="btn-secondary">Pesan Sekarang</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Photo.jpg/burger.jpg" alt="Burger Lezat" onerror="this.style.display='none'">
+            <div class="hero-badge-floating">⭐ 4.9 / 5 Rating</div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="stat"><span class="stat-num">10K+</span><span>Pelanggan Puas</span></div>
+        <div class="stat"><span class="stat-num">4</span><span>Pilihan Menu</span></div>
+        <div class="stat"><span class="stat-num">15 Mnt</span><span>Waktu Penyajian</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span>Bahan Segar</span></div>
+    </div>
+
+    <!-- MENU SECTION -->
     <main>
         <section id="menu">
-            <h2>Menu Kami</h2>
+            <div class="section-header">
+                <h2>Menu <span>Kami</span></h2>
+                <p>Semua dibuat dari bahan segar setiap harinya</p>
+            </div>
             <div id="daftar-menu"></div>
         </section>
+
+        <!-- ORDER FORM SECTION -->
         <section id="pesan">
-            <h2>Form Pesanan</h2>
-            <form id="form-pesan">
-                <label for="item">Menu</label>
-                <select id="item"></select>
-                <label for="jumlah">Jumlah</label>
-                <input type="number" id="jumlah" value="1" min="1">
-                <button type="submit">Pesan Sekarang</button>
-            </form>
-            <p id="hasil"></p>
+            <div class="pesan-wrapper">
+                <div class="pesan-info">
+                    <h2>Pesan <span>Sekarang</span></h2>
+                    <p>Isi formulir di bawah untuk memesan. Diskon 10% untuk pembelian ≥5 item!</p>
+                    <ul class="perks">
+                        <li>✅ Pembayaran di tempat (COD)</li>
+                        <li>✅ Diskon 10% untuk ≥5 item</li>
+                        <li>✅ Diskon 20% untuk ≥10 item</li>
+                        <li>✅ Tersedia delivery & dine-in</li>
+                    </ul>
+                </div>
+                <div class="form-card">
+                    <form id="form-pesan">
+                        <label for="nama">Nama Pemesan</label>
+                        <input type="text" id="nama" placeholder="Contoh: Budi Santoso" required>
+
+                        <label for="item">Pilih Menu</label>
+                        <select id="item"></select>
+
+                        <label for="jumlah">Jumlah</label>
+                        <input type="number" id="jumlah" value="1" min="1" max="50">
+
+                        <label for="catatan">Catatan (opsional)</label>
+                        <input type="text" id="catatan" placeholder="Contoh: tanpa saus, extra pedas…">
+
+                        <button type="submit" class="btn-submit">🛒 Hitung & Pesan</button>
+                    </form>
+                    <div id="hasil"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TENTANG SECTION -->
+        <section id="tentang">
+            <div class="section-header">
+                <h2>Tentang <span>Kami</span></h2>
+            </div>
+            <div class="tentang-grid">
+                <div class="tentang-card">
+                    <span class="tentang-icon">🍔</span>
+                    <h3>Kualitas Terjamin</h3>
+                    <p>Setiap hidangan kami dibuat dari bahan-bahan pilihan yang segar dan berkualitas tinggi.</p>
+                </div>
+                <div class="tentang-card">
+                    <span class="tentang-icon">⚡</span>
+                    <h3>Cepat & Praktis</h3>
+                    <p>Pesanan siap dalam 15 menit. Cocok untuk makan siang yang sibuk atau makan malam santai.</p>
+                </div>
+                <div class="tentang-card">
+                    <span class="tentang-icon">💰</span>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Makan enak tidak harus mahal. Dapatkan diskon spesial untuk pembelian dalam jumlah banyak.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer><p>2026 Fast Food</p></footer>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <strong>ValereBites</strong>
+                <p>Fast. Fresh. Flavourful.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#pesan">Pesan</a>
+                <a href="#tentang">Tentang</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 ValereBites – All rights reserved.</p>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <div id="wa-widget">
+        <button id="wa-btn" aria-label="Hubungi via WhatsApp" onclick="toggleWAPopup()">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                <path d="M16 2C8.268 2 2 8.268 2 16c0 2.42.636 4.69 1.748 6.655L2 30l7.52-1.72A13.933 13.933 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="#25D366"/>
+                <path d="M22.003 19.274c-.32-.16-1.892-.933-2.185-1.04-.292-.106-.505-.16-.717.16-.213.32-.824 1.04-.01 1.013 1.254-.01 1.838-.48 2.265-.106.32.267 2.157 1.013 4.11-1.04.638-.665 1.12-1.52 1.254-1.733.133-.213.013-.32-.093-.48-.16-.213-1.04-1.573-1.44-2.133-.293-.427-.64-.48-.88-.48H22.3c-.16 0-.427.054-.64.267-.213.213-.8.773-.8 1.893s.82 2.2.933 2.36c.113.16 1.6 2.56 3.973 3.493 2.374.933 2.374.627 2.8.586.427-.04 1.387-.56 1.573-1.093.187-.533.187-.986.133-1.093-.053-.107-.213-.16-.427-.267Z" fill="#fff"/>
+            </svg>
+        </button>
+        <div id="wa-popup" class="wa-popup hidden">
+            <div class="wa-popup-header">
+                <span>📞 Hubungi Kami</span>
+                <button onclick="toggleWAPopup()" aria-label="Tutup">&times;</button>
+            </div>
+            <div class="wa-popup-body">
+                <p>Butuh bantuan atau mau pesan langsung? Hubungi kami di WhatsApp!</p>
+                <a href="https://wa.me/6281315321415" target="_blank" class="wa-link">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <path d="M16 2C8.268 2 2 8.268 2 16c0 2.42.636 4.69 1.748 6.655L2 30l7.52-1.72A13.933 13.933 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="#25D366"/>
+                        <path d="M22.003 19.274c-.32-.16-1.892-.933-2.185-1.04-.292-.106-.505-.16-.717.16-.213.32-.824 1.04-.01 1.013 1.254-.01 1.838-.48 2.265-.106.32.267 2.157 1.013 4.11-1.04.638-.665 1.12-1.52 1.254-1.733.133-.213.013-.32-.093-.48-.16-.213-1.04-1.573-1.44-2.133-.293-.427-.64-.48-.88-.48H22.3c-.16 0-.427.054-.64.267-.213.213-.8.773-.8 1.893s.82 2.2.933 2.36c.113.16 1.6 2.56 3.973 3.493 2.374.933 2.374.627 2.8.586.427-.04 1.387-.56 1.573-1.093.187-.533.187-.986.133-1.093-.053-.107-.213-.16-.427-.267Z" fill="#fff"/>
+                    </svg>
+                    0813-1532-1415
+                </a>
+                <p class="wa-note">Klik untuk buka WhatsApp</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FLOATING CHATBOT ===== -->
+    <div id="chat-widget">
+        <!-- Toggle Button -->
+        <button id="chat-toggle" aria-label="Buka chatbot">
+            <span id="chat-icon">💬</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden">
+            <div id="chat-header">
+                <div class="chat-header-info">
+                    <span class="chat-avatar">🤖</span>
+                    <div>
+                        <strong>ValereBot</strong>
+                        <small>AI Assistant · Online</small>
+                    </div>
+                </div>
+                <button id="chat-close" aria-label="Tutup chat">&times;</button>
+            </div>
+            <div id="chat-messages">
+                <div class="msg bot">
+                    <span class="msg-avatar">🤖</span>
+                    <div class="msg-bubble">Halo! Saya ValereBot 👋 Ada yang bisa saya bantu seputar menu atau pemesanan?</div>
+                </div>
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Ketik pesan…" autocomplete="off">
+                <button id="chat-send" aria-label="Kirim">&#9658;</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-    
 </body>
 </html>
